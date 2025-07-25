@@ -1,0 +1,35 @@
+.form-container {
+    transition: all 0.3s ease;
+}
+
+#toggle:not(:checked) ~ .login-container {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 5;
+}
+#toggle:not(:checked) ~ .register-container {
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1;
+}
+
+#toggle:checked ~ .login-container {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: 1;
+}
+#toggle:checked ~ .register-container {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 5;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    transform: translateY(-1.5rem) scale(0.85);
+    color: #3b82f6;
+}
+
+
+
+
