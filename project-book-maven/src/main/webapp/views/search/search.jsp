@@ -68,7 +68,7 @@
                         </c:if>
 
                     <c:forEach begin="1" end="${numOfPage}" var="i">
-                        <li class="page-item"><a class="page-link" href="search?firstname=${firstname}&lastname=${lastname}&key=${id}&page=${i}">${i}</a></li>                      
+                        <li class="page-item ${i == currentPage ? 'font-bold text-blue-600' : ''}"><a class="page-link" href="search?firstname=${firstname}&lastname=${lastname}&key=${id}&page=${i}">${i}</a></li>                      
                         </c:forEach>
 
                     <c:if test="${currentPage < numOfPage}">

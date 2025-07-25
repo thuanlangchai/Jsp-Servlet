@@ -152,7 +152,7 @@
                     <li class="page-item"><a class="page-link" href="category?firstname=${firstname}&lastname=${lastname}&page=${currentPage - 1}">Previous</a></li>
                     </c:if>
                     <c:forEach begin="1" end="${numOfPage}" var="i">
-                    <li class="page-item"><a class="page-link" href="category?firstname=${firstname}&lastname=${lastname}&page=${i}">${i}</a></li>
+                    <li class="page-item ${i == currentPage ? 'font-bold text-blue-600' : ''}"><a class="page-link" href="category?firstname=${firstname}&lastname=${lastname}&page=${i}">${i}</a></li>
                     </c:forEach>
                     <c:if test="${currentPage < numOfPage}">
                     <li class="page-item"><a class="page-link" href="category?firstname=${firstname}&lastname=${lastname}&page=${currentPage + 1}">Next</a></li>

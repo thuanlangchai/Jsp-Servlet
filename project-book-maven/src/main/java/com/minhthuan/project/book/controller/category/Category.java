@@ -1,4 +1,4 @@
-package com.minhthuan.project.book.cotroller.category;
+package com.minhthuan.project.book.controller.category;
 
 import com.minhthuan.project.book.IService.CategoryIService;
 import com.minhthuan.project.book.model.CategoryModel;
