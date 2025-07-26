@@ -1,4 +1,4 @@
-<%@include file="/taglib/taglib.jsp" %>
+    <%@include file="/taglib/taglib.jsp" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,10 +57,10 @@
                                 Actions</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">        
-                        <c:forEach var="book" items="${ListBook}">
+                    <tbody class="bg-white divide-y divide-gray-200">                           
+                        <c:forEach var="book" items="${ListBook}" varStatus="status">
                             <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${book.getId()}</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${(currentPage - 1) * 4 + status.count}</td>                                
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <img src="${book.getImage()}" alt="${book.getName()}" class="book-image">
                                 </td>

@@ -56,9 +56,9 @@
                             </c:when>
                             <c:otherwise>
                                 <tbody id="categoryTableBody" class="bg-white divide-y divide-gray-200">
-                                    <c:forEach var="category" items="${listCategory}">
+                                    <c:forEach var="category" items="${listCategory}" varStatus="status">
                                         <tr>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${category.id}</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${(currentPage - 1) * 4 + status.count}</td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${category.name}</td>
                                             <td class="px-6 py-4 text-sm text-gray-500">${category.content}</td>
                                             <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
